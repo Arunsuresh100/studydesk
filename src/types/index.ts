@@ -5,6 +5,7 @@ export interface UserProfile {
   level: AcademicLevel;
   course: string;
   semester: number;
+  scheme?: string;
 }
 
 export interface NoteItem {

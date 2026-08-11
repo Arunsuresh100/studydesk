@@ -32,6 +32,7 @@ export function OnboardingModal() {
   const [name, setName] = useState(isOnboarded ? (user?.name || "") : "");
   const [level, setLevel] = useState<AcademicLevel | null>(isOnboarded ? (user?.level || null) : null);
   const [course, setCourse] = useState(isOnboarded ? (user?.course || "") : "");
+  const [scheme, setScheme] = useState(isOnboarded ? (user?.scheme || "") : "");
   const [semester, setSemester] = useState<number | null>(isOnboarded ? (user?.semester || null) : null);
 
   // Loading animation checkmarks phase
@@ -40,6 +41,7 @@ export function OnboardingModal() {
   const handleLevelChange = (newLevel: AcademicLevel) => {
     setLevel(newLevel);
     setCourse("");
+    setScheme("");
     setSemester(null);
   };
 
@@ -51,7 +53,8 @@ export function OnboardingModal() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !level || !course || !semester) return;
+    const isBTech = course.toLowerCase().includes("b.tech");
+    if (!name.trim() || !level || !course || !semester || (isBTech && !scheme)) return;
 
     setIsLoading(true);
     setLoadingPhase(1);
@@ -66,6 +69,7 @@ export function OnboardingModal() {
         level,
         course,
         semester: semester as number,
+        ...(isBTech ? { scheme } : {}),
       });
       setIsLoading(false);
       setShowOnboardingModal(false);
@@ -207,7 +211,10 @@ export function OnboardingModal() {
                         <button
                           key={c}
                           type="button"
-                          onClick={() => setCourse(c)}
+                          onClick={() => {
+                            setCourse(c);
+                            setScheme("");
+                          }}
                           className={`px-4 py-2.5 rounded-full border text-xs font-semibold transition-all flex items-center gap-1.5 capitalize ${
                             isSelected
                               ? "border-black bg-black text-white shadow-md ring-2 ring-black/20"
@@ -223,8 +230,37 @@ export function OnboardingModal() {
                 </div>
               )}
 
+              {/* 3.5. Scheme Selection (SHOWN ONLY IF B.TECH) */}
+              {level && course && course.toLowerCase().includes("b.tech") && (
+                <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                  <label className="block mb-2.5 text-sm font-bold text-gray-800">
+                    Select Scheme
+                  </label>
+                  <div className="flex flex-wrap gap-2.5 p-1">
+                    {["2019 scheme", "2024 scheme"].map((s) => {
+                      const isSelected = scheme === s;
+                      return (
+                        <button
+                          key={s}
+                          type="button"
+                          onClick={() => setScheme(s)}
+                          className={`px-4 py-2.5 rounded-full border text-xs font-semibold transition-all flex items-center gap-1.5 capitalize ${
+                            isSelected
+                              ? "border-black bg-black text-white shadow-md ring-2 ring-black/20"
+                              : "border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50"
+                          }`}
+                        >
+                          {isSelected && <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-white" />}
+                          {s}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {/* 4. Semester Selection (SHOWN ONLY IF LEVEL AND COURSE SELECTED) */}
-              {level && course && (
+              {level && course && (!course.toLowerCase().includes("b.tech") || scheme) && (
                 <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
                   <label className="block mb-2.5 text-sm font-bold text-gray-800">
                     Current Semester
@@ -255,7 +291,7 @@ export function OnboardingModal() {
               <div className="pt-3 border-t border-gray-100 flex justify-end">
                 <Button
                   type="submit"
-                  disabled={!name.trim() || !level || !course || !semester}
+                  disabled={!name.trim() || !level || !course || !semester || (course.toLowerCase().includes("b.tech") && !scheme)}
                   className="w-full sm:w-auto h-12 px-8 bg-black text-white hover:bg-gray-800 font-bold text-sm rounded-xl transition-all shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Complete Setup & Continue

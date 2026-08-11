@@ -91,7 +91,7 @@ export default function PlaylistsPage() {
       </div>
 
       {/* Playlist Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {filteredPlaylists.map((playlist) => (
           <div
             key={playlist.id}
@@ -116,28 +116,28 @@ export default function PlaylistsPage() {
               </div>
 
               {/* Details */}
-              <div className="p-6 space-y-3">
+              <div className="p-4 space-y-2">
                 <div className="flex items-center justify-between">
-                  <Badge variant="outline" className="text-[11px] font-bold">
+                  <Badge variant="outline" className="text-[10px] font-bold px-1.5 py-0">
                     {playlist.subject}
                   </Badge>
-                  <span className="text-xs text-gray-400 font-medium">{playlist.channelName}</span>
+                  <span className="text-[10px] text-gray-400 font-medium truncate ml-2">{playlist.channelName}</span>
                 </div>
 
-                <h3 className="text-lg font-bold leading-snug group-hover:underline text-black ">
+                <h3 className="text-sm font-bold leading-snug group-hover:underline text-black line-clamp-2">
                   {playlist.title}
                 </h3>
               </div>
             </div>
 
-            <div className="px-6 pb-6 pt-2 flex items-center justify-between border-t border-gray-100  mt-2">
-              <span className="text-xs text-gray-500 font-medium">Curated for {playlist.course}</span>
+            <div className="px-4 pb-4 pt-3 flex flex-col gap-2 border-t border-gray-100 mt-auto">
+              <span className="text-[10px] text-gray-500 font-medium truncate">Curated for {playlist.course}</span>
 
               <Button
                 onClick={() => setActivePlaylist(playlist)}
-                className="bg-black text-white   rounded-xl h-9 px-4 text-xs font-semibold"
+                className="bg-black text-white rounded-lg h-8 px-3 text-[11px] font-semibold w-full"
               >
-                Watch Video Series →
+                Watch Series →
               </Button>
             </div>
           </div>
