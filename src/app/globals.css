@@ -56,7 +56,12 @@
 }
 
 /* Force light mode regardless of system preference */
-.dark, @media (prefers-color-scheme: dark) {
+.dark {
+  --background: #ffffff !important;
+  --foreground: #000000 !important;
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff !important;
     --foreground: #000000 !important;

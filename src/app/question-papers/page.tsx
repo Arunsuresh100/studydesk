@@ -86,7 +86,7 @@ export default function QuestionPapersPage() {
 
         {/* Year & Exam Type Dropdowns */}
         <div className="flex flex-wrap items-center gap-3">
-          <Select value={selectedYear} onValueChange={setSelectedYear}>
+          <Select value={selectedYear} onValueChange={(val) => val && setSelectedYear(val)}>
             <SelectTrigger className="h-11 px-4 py-2 bg-gray-100 border border-gray-200 rounded-xl focus:ring-0 focus:ring-offset-0 shadow-none hover:bg-gray-200 transition-colors duration-200 text-xs font-bold text-black w-auto min-w-[140px] flex items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4 text-gray-500" />
@@ -103,7 +103,7 @@ export default function QuestionPapersPage() {
             </SelectContent>
           </Select>
 
-          <Select value={selectedExamType} onValueChange={setSelectedExamType}>
+          <Select value={selectedExamType} onValueChange={(val) => val && setSelectedExamType(val)}>
             <SelectTrigger className="h-11 px-4 py-2 bg-gray-100 border border-gray-200 rounded-xl focus:ring-0 focus:ring-offset-0 shadow-none hover:bg-gray-200 transition-colors duration-200 text-xs font-bold text-black w-auto min-w-[140px] flex items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
                 <Filter className="h-4 w-4 text-gray-500" />
