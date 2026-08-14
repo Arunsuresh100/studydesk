@@ -1,52 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { BookOpen, Edit3 } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 
 export function Navbar() {
   const { user, setShowOnboardingModal } = useUser();
-  const pathname = usePathname();
-
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/notes", label: "Notes" },
-    { href: "/syllabus", label: "Syllabus" },
-    { href: "/question-papers", label: "Question Papers" },
-    { href: "/playlists", label: "Playlists" },
-    { href: "/short-note", label: "Short Note" },
-  ];
 
   return (
     <header className="w-full border-b border-gray-200 bg-white sticky top-0 z-50">
-      <div className="w-full px-6 md:px-8 flex h-16 items-center justify-between mx-auto">
-        {/* Brand Logo - Exact Old Design */}
-        <Link href="/" className="flex items-center gap-2">
-          <BookOpen className="h-6 w-6 text-black" />
-          <span className="font-bold tracking-tight text-xl text-black">StudyDesk</span>
+      <div className="max-w-[1280px] w-full px-4 sm:px-6 md:px-8 flex h-16 items-center justify-between mx-auto">
+        <Link href="/" className="flex items-center gap-2 group">
+          <BookOpen className="h-6 w-6 text-black group-hover:text-gray-700 transition-colors" />
+          <span className="font-extrabold tracking-tight text-xl text-black group-hover:text-gray-700 transition-colors">StudyDesk</span>
         </Link>
-
-        {/* Navigation Links - Exact Old Design */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium transition-colors capitalize ${
-                  isActive
-                    ? "text-black font-semibold"
-                    : "text-gray-600 hover:text-black"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-
+        
         {/* User Profile Badge (if onboarded) or Edit Action */}
         {user ? (
           <button

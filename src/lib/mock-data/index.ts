@@ -1,4 +1,5 @@
 import { NoteItem, PYQItem, SyllabusSubject, PlaylistCard, ShortNoteItem, SubjectBox } from "@/types";
+import { csBtechSubjects } from "./btech-cs";
 
 export const COURSES_BY_LEVEL = {
   UG: [
@@ -380,6 +381,7 @@ export const mockSubjectBoxes: SubjectBox[] = [
     description: "Core algorithms, data abstractions, time complexity analysis, trees, graphs, and dynamic programming.",
     course: "B.Tech Computer Science",
     level: "UG",
+    semester: 3,
     chapters: [
       {
         id: "ch-dsa-1",
@@ -522,6 +524,7 @@ export const mockSubjectBoxes: SubjectBox[] = [
     description: "System calls, process scheduling, CPU dispatching, concurrency control, semaphores, memory management, and paging.",
     course: "B.Tech Computer Science",
     level: "UG",
+    semester: 4,
     chapters: [
       {
         id: "ch-os-1",
@@ -616,6 +619,7 @@ export const mockSubjectBoxes: SubjectBox[] = [
     description: "Relational data model, ER diagrams, SQL queries, relational algebra, database normalization (1NF to BCNF), and ACID transactions.",
     course: "B.Tech Computer Science",
     level: "UG",
+    semester: 4,
     chapters: [
       {
         id: "ch-dbms-1",
@@ -682,6 +686,7 @@ export const mockSubjectBoxes: SubjectBox[] = [
     description: "OSI & TCP/IP layers, IP addressing, subnetting, TCP/UDP transport mechanics, routing protocols, HTTP, and DNS.",
     course: "B.Tech Computer Science",
     level: "UG",
+    semester: 4,
     chapters: [
       {
         id: "ch-cn-1",
@@ -807,4 +812,5 @@ export const mockSubjectBoxes: SubjectBox[] = [
       },
     ],
   },
+  ...csBtechSubjects
 ];

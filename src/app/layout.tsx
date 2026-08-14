@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { UserProvider } from "@/context/UserContext";
+
 import { AppLayout } from "@/components/layout/AppLayout";
+
+import { UserProvider } from "@/context/UserContext";
 
 export const metadata: Metadata = {
   title: "StudyDesk | Student Companion & Resource Hub",

@@ -104,5 +104,6 @@ export interface SubjectBox {
   description: string;
   course: string;
   level: AcademicLevel;
+  semester?: number;
   chapters: SubjectChapter[];
 }
