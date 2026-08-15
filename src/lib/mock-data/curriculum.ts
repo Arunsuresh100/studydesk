@@ -257,6 +257,40 @@ import { aud415 } from "./subjects/aud415";
 import { aut402 } from "./subjects/aut402";
 import { aut404 } from "./subjects/aut404";
 import { aud416 } from "./subjects/aud416";
+import { mg1dscbca100 } from "./subjects/mg1dscbca100";
+import { mg1dscbca101 } from "./subjects/mg1dscbca101";
+import { mg1dscbca102 } from "./subjects/mg1dscbca102";
+import { mg1dscbca103 } from "./subjects/mg1dscbca103";
+import { mg1mdcbca100 } from "./subjects/mg1mdcbca100";
+import { mg1aeceng100 } from "./subjects/mg1aeceng100";
+import { aec } from "./subjects/aec";
+import { mg2ccrbca100 } from "./subjects/mg2ccrbca100";
+import { mg2ccrbca101 } from "./subjects/mg2ccrbca101";
+import { mg2ccrbca102 } from "./subjects/mg2ccrbca102";
+import { mg2secbca100 } from "./subjects/mg2secbca100";
+import { mg2vacbca100 } from "./subjects/mg2vacbca100";
+import { mg3ccrbca200 } from "./subjects/mg3ccrbca200";
+import { mg3ccrbca201 } from "./subjects/mg3ccrbca201";
+import { mg3ccrbca202 } from "./subjects/mg3ccrbca202";
+import { mg3ccrbca203 } from "./subjects/mg3ccrbca203";
+import { mg3secbca200 } from "./subjects/mg3secbca200";
+import { mg3dsebca200 } from "./subjects/mg3dsebca200";
+import { mg3dsebca201 } from "./subjects/mg3dsebca201";
+import { mg3dsebca202 } from "./subjects/mg3dsebca202";
+import { mg4ccrbca200 } from "./subjects/mg4ccrbca200";
+import { mg4secbca200 } from "./subjects/mg4secbca200";
+import { mg4secbca201 } from "./subjects/mg4secbca201";
+import { mg4secbca202 } from "./subjects/mg4secbca202";
+import { mg4vacbca200 } from "./subjects/mg4vacbca200";
+import { mg4vacbca201 } from "./subjects/mg4vacbca201";
+import { mg4dsebca200 } from "./subjects/mg4dsebca200";
+import { mg4dsebca201 } from "./subjects/mg4dsebca201";
+import { mg4dsebca202 } from "./subjects/mg4dsebca202";
+import { mg5ccrbca300 } from "./subjects/mg5ccrbca300";
+import { mg5ccrbca301 } from "./subjects/mg5ccrbca301";
+import { mg5ccrbca302 } from "./subjects/mg5ccrbca302";
+import { mg601 } from "./subjects/mg601";
+import { mg602 } from "./subjects/mg602";
 
 export const allCurriculums: CurriculumMapping[] = [
   {
@@ -1094,6 +1128,79 @@ export const allCurriculums: CurriculumMapping[] = [
       aut402,
       aut404,
       aud416
+    ],
+  },
+
+  {
+    courseId: "BCA (Computer Applications)",
+    semester: 1,
+    subjects: [
+      mg1dscbca100,
+      mg1dscbca101,
+      mg1dscbca102,
+      mg1dscbca103,
+      mg1mdcbca100,
+      mg1aeceng100,
+      aec
+    ],
+  },
+  {
+    courseId: "BCA (Computer Applications)",
+    semester: 2,
+    subjects: [
+      mg2ccrbca100,
+      mg2ccrbca101,
+      mg2ccrbca102,
+      mg2secbca100,
+      mg2vacbca100,
+      aec,
+      aec
+    ],
+  },
+  {
+    courseId: "BCA (Computer Applications)",
+    semester: 3,
+    subjects: [
+      mg3ccrbca200,
+      mg3ccrbca201,
+      mg3ccrbca202,
+      mg3ccrbca203,
+      mg3secbca200,
+      mg3dsebca200,
+      mg3dsebca201,
+      mg3dsebca202
+    ],
+  },
+  {
+    courseId: "BCA (Computer Applications)",
+    semester: 4,
+    subjects: [
+      mg4ccrbca200,
+      mg4secbca200,
+      mg4secbca201,
+      mg4secbca202,
+      mg4vacbca200,
+      mg4vacbca201,
+      mg4dsebca200,
+      mg4dsebca201,
+      mg4dsebca202
+    ],
+  },
+  {
+    courseId: "BCA (Computer Applications)",
+    semester: 5,
+    subjects: [
+      mg5ccrbca300,
+      mg5ccrbca301,
+      mg5ccrbca302
+    ],
+  },
+  {
+    courseId: "BCA (Computer Applications)",
+    semester: 6,
+    subjects: [
+      mg601,
+      mg602
     ],
   },
 ];
