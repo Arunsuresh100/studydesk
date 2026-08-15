@@ -291,6 +291,40 @@ import { mg5ccrbca301 } from "./subjects/mg5ccrbca301";
 import { mg5ccrbca302 } from "./subjects/mg5ccrbca302";
 import { mg601 } from "./subjects/mg601";
 import { mg602 } from "./subjects/mg602";
+import { mcact101 } from "./subjects/mcact101";
+import { mcact102 } from "./subjects/mcact102";
+import { mcact103 } from "./subjects/mcact103";
+import { mcact104 } from "./subjects/mcact104";
+import { mcact105 } from "./subjects/mcact105";
+import { mcacp106 } from "./subjects/mcacp106";
+import { mcacp107 } from "./subjects/mcacp107";
+import { mcact108 } from "./subjects/mcact108";
+import { mcact201 } from "./subjects/mcact201";
+import { mcact202 } from "./subjects/mcact202";
+import { mcact203 } from "./subjects/mcact203";
+import { mcact204 } from "./subjects/mcact204";
+import { mcacp205 } from "./subjects/mcacp205";
+import { mcacp206 } from "./subjects/mcacp206";
+import { mcacp207 } from "./subjects/mcacp207";
+import { mcact301 } from "./subjects/mcact301";
+import { mcact302 } from "./subjects/mcact302";
+import { mcaet303 } from "./subjects/mcaet303";
+import { mca303et1 } from "./subjects/mca303et1";
+import { mca303et2 } from "./subjects/mca303et2";
+import { mca303et3 } from "./subjects/mca303et3";
+import { mca303et4 } from "./subjects/mca303et4";
+import { mcaet304 } from "./subjects/mcaet304";
+import { mca304et1 } from "./subjects/mca304et1";
+import { mca304et2 } from "./subjects/mca304et2";
+import { mca304et3 } from "./subjects/mca304et3";
+import { mca304et4 } from "./subjects/mca304et4";
+import { mcacp305 } from "./subjects/mcacp305";
+import { mcacp306 } from "./subjects/mcacp306";
+import { mcacp307 } from "./subjects/mcacp307";
+import { mcact308 } from "./subjects/mcact308";
+import { mca401 } from "./subjects/mca401";
+import { mca402 } from "./subjects/mca402";
+import { mca403 } from "./subjects/mca403";
 
 export const allCurriculums: CurriculumMapping[] = [
   {
@@ -1201,6 +1235,65 @@ export const allCurriculums: CurriculumMapping[] = [
     subjects: [
       mg601,
       mg602
+    ],
+  },
+
+  {
+    courseId: "MCA (Master of Computer Apps) - MGU",
+    semester: 1,
+    subjects: [
+      mcact101,
+      mcact102,
+      mcact103,
+      mcact104,
+      mcact105,
+      mcacp106,
+      mcacp107,
+      mcact108
+    ],
+  },
+  {
+    courseId: "MCA (Master of Computer Apps) - MGU",
+    semester: 2,
+    subjects: [
+      mcact201,
+      mcact202,
+      mcact203,
+      mcact204,
+      mcacp205,
+      mcacp206,
+      mcacp207
+    ],
+  },
+  {
+    courseId: "MCA (Master of Computer Apps) - MGU",
+    semester: 3,
+    subjects: [
+      mcact301,
+      mcact302,
+      mcaet303,
+      mca303et1,
+      mca303et2,
+      mca303et3,
+      mca303et4,
+      mcaet304,
+      mca304et1,
+      mca304et2,
+      mca304et3,
+      mca304et4,
+      mcacp305,
+      mcacp306,
+      mcacp307,
+      mcact308
+    ],
+  },
+  {
+    courseId: "MCA (Master of Computer Apps) - MGU",
+    semester: 4,
+    subjects: [
+      mca401,
+      mca402,
+      mca403
     ],
   },
 ];

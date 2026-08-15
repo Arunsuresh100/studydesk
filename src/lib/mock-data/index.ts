@@ -24,7 +24,7 @@ export const COURSES_BY_LEVEL = {
     "M.Tech Embedded Systems",
     "M.Sc Data Science",
     "M.Sc Physics & Electronics",
-    "MCA (Master of Computer Apps)",
+    "MCA (Master of Computer Apps) - MGU",
     "MBA Finance & Systems",
   ],
 };
