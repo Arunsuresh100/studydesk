@@ -15,7 +15,7 @@ export const COURSES_BY_LEVEL = {
     "B.Tech Automobile Engineering",
     "B.Sc Computer Science",
     "B.Sc Physics",
-    "BCA (Computer Applications)",
+    "BCA (Computer Applications) - MGU",
     "B.Com Business Administration",
     "BBA Marketing & Mgmt",
   ],
@@ -87,7 +87,7 @@ export const mockNotes: NoteItem[] = [
     author: "Prof. V. Gupta",
     url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
     level: "UG",
-    course: "BCA (Computer Applications)",
+    course: "BCA (Computer Applications) - MGU",
     summary: "Relational Algebra, ER Diagrams, Normalization (1NF to BCNF), SQL Queries & MongoDB basics.",
   },
   {

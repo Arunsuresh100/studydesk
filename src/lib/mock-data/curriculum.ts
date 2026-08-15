@@ -1132,7 +1132,7 @@ export const allCurriculums: CurriculumMapping[] = [
   },
 
   {
-    courseId: "BCA (Computer Applications)",
+    courseId: "BCA (Computer Applications) - MGU",
     semester: 1,
     subjects: [
       mg1dscbca100,
@@ -1145,7 +1145,7 @@ export const allCurriculums: CurriculumMapping[] = [
     ],
   },
   {
-    courseId: "BCA (Computer Applications)",
+    courseId: "BCA (Computer Applications) - MGU",
     semester: 2,
     subjects: [
       mg2ccrbca100,
@@ -1158,7 +1158,7 @@ export const allCurriculums: CurriculumMapping[] = [
     ],
   },
   {
-    courseId: "BCA (Computer Applications)",
+    courseId: "BCA (Computer Applications) - MGU",
     semester: 3,
     subjects: [
       mg3ccrbca200,
@@ -1172,7 +1172,7 @@ export const allCurriculums: CurriculumMapping[] = [
     ],
   },
   {
-    courseId: "BCA (Computer Applications)",
+    courseId: "BCA (Computer Applications) - MGU",
     semester: 4,
     subjects: [
       mg4ccrbca200,
@@ -1187,7 +1187,7 @@ export const allCurriculums: CurriculumMapping[] = [
     ],
   },
   {
-    courseId: "BCA (Computer Applications)",
+    courseId: "BCA (Computer Applications) - MGU",
     semester: 5,
     subjects: [
       mg5ccrbca300,
@@ -1196,7 +1196,7 @@ export const allCurriculums: CurriculumMapping[] = [
     ],
   },
   {
-    courseId: "BCA (Computer Applications)",
+    courseId: "BCA (Computer Applications) - MGU",
     semester: 6,
     subjects: [
       mg601,
