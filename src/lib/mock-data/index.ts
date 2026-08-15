@@ -1,5 +1,7 @@
 import { NoteItem, PYQItem, SyllabusSubject, PlaylistCard, ShortNoteItem, SubjectBox } from "@/types";
 import { csBtechSubjects } from "./btech-cs";
+import { allCurriculums } from "./curriculum";
+export { allCurriculums };
 
 export const COURSES_BY_LEVEL = {
   UG: [
@@ -812,5 +814,6 @@ export const mockSubjectBoxes: SubjectBox[] = [
       },
     ],
   },
-  ...csBtechSubjects
+  ...csBtechSubjects,
+  ...allCurriculums.flatMap(c => c.subjects)
 ];

@@ -102,8 +102,14 @@ export interface SubjectBox {
   subjectName: string;
   code: string;
   description: string;
-  course: string;
   level: AcademicLevel;
-  semester?: number;
+  course?: string; // Optional for backward compatibility during migration
+  semester?: number; // Optional for backward compatibility during migration
   chapters: SubjectChapter[];
+}
+
+export interface CurriculumMapping {
+  courseId: string;
+  semester: number;
+  subjects: SubjectBox[];
 }

@@ -3,7 +3,7 @@
 import React, { use } from "react";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Layers } from "lucide-react";
-import { mockSubjectBoxes } from "@/lib/mock-data";
+import { mockSubjectBoxes, allCurriculums } from "@/lib/mock-data";
 import { Badge } from "@/components/ui/badge";
 import { useUser } from "@/context/UserContext";
 
@@ -11,11 +11,6 @@ export default function CoursePage({ params }: { params: Promise<{ courseId: str
   const resolvedParams = use(params);
   const decodedCourse = decodeURIComponent(resolvedParams.courseId);
   const { user, setShowOnboardingModal } = useUser();
-
-  // Filter subjects for this course and the user's selected semester
-  const courseSubjects = mockSubjectBoxes.filter(
-    (sb) => sb.course === decodedCourse && (!sb.semester || sb.semester === user.semester)
-  );
 
   if (!user) {
     return (
@@ -31,6 +26,18 @@ export default function CoursePage({ params }: { params: Promise<{ courseId: str
       </div>
     );
   }
+
+  // Try to find the new mapped curriculum first
+  const mappedCurriculum = allCurriculums?.find(
+    (c) => c.courseId === decodedCourse && c.semester === user.semester
+  );
+
+  // Filter subjects for this course and the user's selected semester
+  const courseSubjects = mappedCurriculum 
+    ? mappedCurriculum.subjects 
+    : mockSubjectBoxes.filter(
+        (sb) => sb.course === decodedCourse && (!sb.semester || sb.semester === user.semester)
+      );
 
   return (
     <div className="min-h-screen bg-gray-50/50 text-black font-sans selection:bg-black selection:text-white pb-20">
