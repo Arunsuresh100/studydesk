@@ -233,6 +233,30 @@ import { add415 } from "./subjects/add415";
 import { adt402 } from "./subjects/adt402";
 import { adt404 } from "./subjects/adt404";
 import { add416 } from "./subjects/add416";
+import { aut201 } from "./subjects/aut201";
+import { aut203 } from "./subjects/aut203";
+import { aul201 } from "./subjects/aul201";
+import { mat202 } from "./subjects/mat202";
+import { aut202 } from "./subjects/aut202";
+import { aut204 } from "./subjects/aut204";
+import { aut206 } from "./subjects/aut206";
+import { aul202 } from "./subjects/aul202";
+import { aut301 } from "./subjects/aut301";
+import { aut303 } from "./subjects/aut303";
+import { aut305 } from "./subjects/aut305";
+import { aut307 } from "./subjects/aut307";
+import { mul331 } from "./subjects/mul331";
+import { aut304 } from "./subjects/aut304";
+import { aut306 } from "./subjects/aut306";
+import { aut308 } from "./subjects/aut308";
+import { aul334 } from "./subjects/aul334";
+import { aut401 } from "./subjects/aut401";
+import { aul411 } from "./subjects/aul411";
+import { auq413 } from "./subjects/auq413";
+import { aud415 } from "./subjects/aud415";
+import { aut402 } from "./subjects/aut402";
+import { aut404 } from "./subjects/aut404";
+import { aud416 } from "./subjects/aud416";
 
 export const allCurriculums: CurriculumMapping[] = [
   {
@@ -963,6 +987,113 @@ export const allCurriculums: CurriculumMapping[] = [
       adt402,
       adt404,
       add416
+    ],
+  },
+
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 1,
+    subjects: [
+      mat101,
+      pht100,
+      est100,
+      est120,
+      hut101,
+      phl120,
+      esl120
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 2,
+    subjects: [
+      mat102,
+      cyt100,
+      est110,
+      est130,
+      est102,
+      hut102,
+      cyl120,
+      esl130
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 3,
+    subjects: [
+      mat201,
+      met201,
+      aut201,
+      aut203,
+      est200,
+      hut200,
+      mcn201,
+      aul201,
+      mel203
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 4,
+    subjects: [
+      mat202,
+      aut202,
+      aut204,
+      aut206,
+      est200,
+      hut200,
+      mcn202,
+      mel202,
+      aul202
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 5,
+    subjects: [
+      aut301,
+      aut303,
+      aut305,
+      aut307,
+      hut300,
+      hut310,
+      mcn301,
+      mul331,
+      mel333
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 6,
+    subjects: [
+      met302,
+      aut304,
+      aut306,
+      hut300,
+      hut310,
+      aut308,
+      mel332,
+      aul334
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 7,
+    subjects: [
+      aut401,
+      mcn401,
+      aul411,
+      auq413,
+      aud415
+    ],
+  },
+  {
+    courseId: "B.Tech Automobile Engineering",
+    semester: 8,
+    subjects: [
+      aut402,
+      aut404,
+      aud416
     ],
   },
 ];

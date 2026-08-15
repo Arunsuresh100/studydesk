@@ -12,6 +12,7 @@ export const COURSES_BY_LEVEL = {
     "B.Tech Electrical & Electronics",
     "B.Tech Information Technology",
     "B.Tech AI & Data Science",
+    "B.Tech Automobile Engineering",
     "B.Sc Computer Science",
     "B.Sc Physics",
     "BCA (Computer Applications)",
